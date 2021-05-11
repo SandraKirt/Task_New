@@ -3,35 +3,35 @@ package lv.ctco.task1;
 import java.util.List;
 
 public class LineUtils {
-    protected static String concatAllTextLines(List<String> lines){
+    static String concatAllTextLines(List<String> lines){
         String concatString = "";
-        for (int p = 0; p < lines.size(); p++) {
-            if (!NumberUtils.isInteger(lines.get(p))) {
-                concatString += lines.get(p);
+        for (String line: lines) {
+            if (!NumberUtils.isInteger(line)){
+                concatString += line;
             }
         }
         return concatString;
     }
 
-    protected static int sumAllNumberLines(List<String> lines){
+    static int sumAllNumberLines(List<String> lines){
         int sum = 0;
-        for (int j = 0; j < lines.size(); j++) {
-            if (NumberUtils.isInteger(lines.get(j))) {
-                sum += Integer.parseInt(lines.get(j));
+        for (String line: lines) {
+            if (NumberUtils.isInteger(line)) {
+                sum += Integer.parseInt(line);
             }
         }
         return sum;
     }
 
-    protected static int countEvenNumberLines(List<String> lines){
-        int c = 0;
-        for (int n = 0; n < lines.size(); n++){
-            if (NumberUtils.isInteger(lines.get(n))) {
-                if (Integer.parseInt(lines.get(n))%2 ==0) {
-                    c++;
+    static int countEvenNumberLines(List<String> lines){
+        int count = 0;
+        for (String line : lines){
+            if (NumberUtils.isInteger(line)) {
+                if (Integer.parseInt(line)%2 ==0) {
+                    count++;
                 }
             }
         }
-        return c;
+        return count;
     }
 }
