@@ -17,7 +17,7 @@ public class LineUtilsTest {
 
     @BeforeClass
     public static void inputData() throws IOException {
-        String path = "C:\\Users\\sandra.kirtovska\\IdeaProjects\\Task1\\src\\test\\resources\\InputFile.txt";
+        String path = "C:\\Users\\sandra.kirtovska\\IdeaProjects\\Task_New\\src\\test\\resources\\InputFile.txt";
         File inputFile = new File(path);
         testLines = FileUtils.readLines(inputFile, StandardCharsets.UTF_8);
     }
